@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main.css">
     <title>Minesweeper</title>
 </head>
-<body onload="initGame()"> <!-- oncontextmenu="return false;" -->
-    <div class="buttons">
-        
-        <button onclick="chooseDifficulty(4)">EASY</button>
-        <button onclick="chooseDifficulty(8)">NORMAL</button>
-        <button onclick="chooseDifficulty(12)">HARD</button>
-        <div class="timer">Timer: <span></span></div>
+
+
+<body class="body" onload="init()">
+    <div class="img-container">
+        <h1 class="title" style="font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MINESWEEPER</h1>
     </div>
-    <table>
-        <tbody></tbody>
-    </table>
+    <div class="timer">00:00</div>
+    <div onclick="reset()" class="reset">😀</div>
+    <div class="buttons">
+        <button class="btn" onclick="toggleGame(this)">EASY</button>
+        <button class="btn" onclick="toggleGame(this)">NORMAL</button>
+        <button class="btn" onclick="toggleGame(this)">HARD</button>
+    </div>
+
+    <div class="game-board"></div>
+
     <script src="js/main.js"></script>
-    <script src="js/util.js"></script>
-    
+    <script src="js/utils.js"></script>
 </body>
+<footer class="footer">By Pirhiya Asor</footer>
+
 </html>
