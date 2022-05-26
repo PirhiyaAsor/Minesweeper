@@ -12,21 +12,39 @@
 
 <body class="body" onload="init()">
     <div class="img-container">
-        <h1 class="title" style="font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MINESWEEPER</h1>
+        <h1 style="font-size: 55px;">MINESWEEPER</h1>
     </div>
-    <div class="timer">00:00</div>
-    <div onclick="reset()" class="reset">😀</div>
+
+    <div class="timeResetsBtn">
+        <div class="timer">00:00</div>
+        <div class="resetBtn" onclick="reset()">😀</div>
+    </div>
+    <div class="gameoverModal">
+        <div class="modal-content">
+            <span>Ohhh...</br> Game over </span>
+        </div>
+    </div>
+    <!-- <div class="victoryModal">
+        <div class="vmodal-content">
+            <span>YOU WIN! </span>
+        </div>
+    </div> -->
+
+
     <div class="buttons">
         <button class="btn" onclick="toggleGame(this)">EASY</button>
         <button class="btn" onclick="toggleGame(this)">NORMAL</button>
         <button class="btn" onclick="toggleGame(this)">HARD</button>
     </div>
 
-    <div class="game-board"></div>
+    <table class="table">
+        <tbody></tbody>
+    </table>
+
+    <footer class="footer">By Pirhiya Asor {-- CodingAcademy, May 2022 --}</footer>
 
     <script src="js/main.js"></script>
     <script src="js/utils.js"></script>
 </body>
-<footer class="footer">By Pirhiya Asor</footer>
 
 </html>

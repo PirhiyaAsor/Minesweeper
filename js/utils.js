@@ -1,4 +1,5 @@
 'use strict'
+console.log('hoooo');
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -6,14 +7,14 @@ function getRandomInt(min, max) {
 function startTimer() {
     gStartTime = new Date
     isTimerOn = true
-    gTimer = setInterval(runTimer,)
+    gTimer = setInterval(runTimer,90)
 }
 function runTimer() {
     if (isTimerOn) {
         var end = new Date
         var time = (end - gStartTime) / 1000
         var elTimer = document.querySelector('.timer')
-        elTimer.innerText = time
+        elTimer.innerText = time.toFixed(2)
     }
 }
 
